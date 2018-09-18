@@ -11,6 +11,15 @@ public class playercontroller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            transform.Translate(0f, 0f, 1.0f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            transform.Translate(0f, 0f, -1.0f);
+        }
+
+    }
 }
