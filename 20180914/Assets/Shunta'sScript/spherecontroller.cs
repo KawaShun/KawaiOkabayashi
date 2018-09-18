@@ -13,4 +13,12 @@ public class spherecontroller : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "goal")
+        {
+            Debug.Log("検知しました");
+        }
+    }
 }
