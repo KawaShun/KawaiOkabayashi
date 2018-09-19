@@ -21,7 +21,7 @@ public class spherecontroller : MonoBehaviour {
             Debug.Log("検知しました");
         }
         if (other.gameObject.tag == "enemy")
-        {
+        {             
             Debug.Log("enemyと衝突");
         } 
     }
