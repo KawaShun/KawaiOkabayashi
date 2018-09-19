@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class spherecontroller : MonoBehaviour {
-
+    
+    public float power = 1000.0f;   //衝突係数
 	// Use this for initialization
 	void Start () {
 		
@@ -26,7 +27,11 @@ public class spherecontroller : MonoBehaviour {
         if (other.gameObject.tag == "enemy")
         {
             Debug.Log("enemyと衝突");
+            //吹っ飛ぶ
+            Vector3 dir = transform.position - other.gameObject.transform.position;
+            dir.Normalize();
+            GetComponent<Rigidbody>().AddForce(dir * power);
         } 
     }
-    
+
 }
