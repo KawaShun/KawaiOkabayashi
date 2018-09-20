@@ -12,6 +12,7 @@ public class ball : MonoBehaviour {
     Vector3 p ;
     Vector3 force;
     public Rigidbody rb;
+   //public GameObject pin;
 
     public   float power = 0;
     void Start () {
@@ -27,9 +28,7 @@ public class ball : MonoBehaviour {
         
         
         power =(Mathf.Abs(power*0.3f));
-      //  float x = Input.GetAxis("Horizontal") * power*6;
-      //  float y = Input.GetAxis("Vertical") * power*6;
-    //    rb.AddForce(x, 0, y);
+        
 
 
     }
