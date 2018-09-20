@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class spherecontroller : MonoBehaviour {
     
-    public float power = 1000.0f;   //衝突係数
+    public float power = 1000.0f;       //シュート係数
+    public float jyakupower = 200.0f;   //ドリブル係数
+   
 	// Use this for initialization
 	void Start () {
 		
@@ -30,7 +32,20 @@ public class spherecontroller : MonoBehaviour {
             //吹っ飛ぶ
             Vector3 dir = transform.position - other.gameObject.transform.position;
             dir.Normalize();
-            GetComponent<Rigidbody>().AddForce(dir * power);
+
+            //シュートとドリブルの力の大きさ
+            if (other.GetComponent<enemycontroller>().GetEnemyMode() == enemycontroller.MODE.DRIBBLE)
+            {
+                GetComponent<Rigidbody>().AddForce(dir * jyakupower);
+            }
+            else
+            {
+                GetComponent<Rigidbody>().AddForce(dir * power);
+
+            }
+
+
+
         } 
     }
 

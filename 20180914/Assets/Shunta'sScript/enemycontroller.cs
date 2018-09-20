@@ -6,6 +6,18 @@ public class enemycontroller : MonoBehaviour {
 
     public GameObject target;
     public float moveSpeed = 1.0f;
+    //敵のモード
+    public enum MODE
+    {
+        DRIBBLE,
+        SHOOT
+    }
+    MODE move = MODE.SHOOT;
+
+    public MODE GetEnemyMode()
+    {
+        return move;
+    }
     // Use this for initialization
     void Start () {
 		
@@ -20,5 +32,7 @@ public class enemycontroller : MonoBehaviour {
         dir.Normalize();
         // 移動させる
         transform.Translate(dir.x * moveSpeed, dir.y * moveSpeed, 0.0f);
+
     }
+    
 }
