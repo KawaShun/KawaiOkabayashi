@@ -13,14 +13,20 @@ public class enemycontroller : MonoBehaviour {
         SHOOT
     }
     MODE move = MODE.SHOOT;
-
+    MODE drib = MODE.DRIBBLE;
     public MODE GetEnemyMode()
     {
         return move;
     }
+
+    public MODE GetEnemyModeDribble()
+    {
+        return drib;
+    }
+
     // Use this for initialization
     void Start () {
-		
+        
 	}
 	
 	// Update is called once per frame
