@@ -6,6 +6,9 @@ TagManager:
   tags:
   - goal
   - enemy
+  - wall
+  - ball
+  - pin
   layers:
   - Default
   - TransparentFX

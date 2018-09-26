@@ -14,6 +14,7 @@ public class objpin : MonoBehaviour {
 			//hit = true;	
 			Debug.Log("hitpin");
 			Destroy(this.gameObject);
+            
 		}
 	}
 }
