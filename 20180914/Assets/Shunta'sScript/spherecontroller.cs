@@ -6,7 +6,7 @@ public class spherecontroller : MonoBehaviour {
     
     public float power = 1000.0f;          //シュート係数
     public float dribblepower = 200.0f;   //ドリブル係数
-    Collider objcoll;
+    Collider objcoll;                     //オブジェクトコライダー
     // Use this for initialization
     void Start () {
         
@@ -43,13 +43,12 @@ public class spherecontroller : MonoBehaviour {
                 GetComponent<Rigidbody>().AddForce(dir * power);
 
             }
-
-
-
         }
+        //床
         if (other.gameObject.tag == "ground")
         {
             Debug.Log("床検知");
+            //すり抜け防止
             objcoll = gameObject.GetComponent<SphereCollider>();
             objcoll.isTrigger = false;
         }

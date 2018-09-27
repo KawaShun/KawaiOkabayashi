@@ -38,7 +38,6 @@ public class enemycontroller : MonoBehaviour {
         dir.Normalize();
         // 移動させる
         transform.Translate(dir.x * moveSpeed, dir.y * moveSpeed, 0.0f);
-
     }
     
 }
