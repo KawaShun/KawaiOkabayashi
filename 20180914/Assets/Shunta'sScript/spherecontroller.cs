@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class spherecontroller : MonoBehaviour {
     
-    public float power = 1000.0f;       //シュート係数
-    public float jyakupower = 200.0f;   //ドリブル係数
-   
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public float power = 1000.0f;          //シュート係数
+    public float dribblepower = 200.0f;   //ドリブル係数
+    Collider objcoll;
+    // Use this for initialization
+    void Start () {
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -36,7 +36,7 @@ public class spherecontroller : MonoBehaviour {
             //シュートとドリブルの力の大きさ
             if (other.GetComponent<enemycontroller>().GetEnemyMode() == enemycontroller.MODE.DRIBBLE)
             {
-                GetComponent<Rigidbody>().AddForce(dir * jyakupower);
+                GetComponent<Rigidbody>().AddForce(dir * dribblepower);
             }
             else
             {
@@ -46,7 +46,14 @@ public class spherecontroller : MonoBehaviour {
 
 
 
-        } 
+        }
+        if (other.gameObject.tag == "ground")
+        {
+            Debug.Log("床検知");
+            objcoll = gameObject.GetComponent<SphereCollider>();
+            objcoll.isTrigger = false;
+        }
+
     }
 
 }
