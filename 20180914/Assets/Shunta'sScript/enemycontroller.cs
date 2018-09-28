@@ -6,7 +6,7 @@ public class enemycontroller : MonoBehaviour {
 
     public GameObject target;
     public float moveSpeed = 1.0f;
-    public Random.State stat;
+    public Random.State state;
     //敵のモード
     public enum MODE
     {
@@ -43,7 +43,7 @@ public class enemycontroller : MonoBehaviour {
     }
     void Random_rnd()
     {
-        Random.InitState(10);
+        Random.InitState(50);
         
     }
 }

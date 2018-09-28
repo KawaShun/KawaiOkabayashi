@@ -34,7 +34,7 @@ public class spherecontroller : MonoBehaviour {
             dir.Normalize();
 
             //シュートとドリブルの力の大きさ
-            if (other.GetComponent<enemycontroller>().GetEnemyMode() == enemycontroller.MODE.DRIBBLE)
+            if (other.GetComponent<enemycontroller>().GetEnemyModeDribble() == enemycontroller.MODE.DRIBBLE)
             {
                 GetComponent<Rigidbody>().AddForce(dir * dribblepower);
             }
