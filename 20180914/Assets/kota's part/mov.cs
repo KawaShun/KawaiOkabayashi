@@ -54,25 +54,26 @@ public class mov : MonoBehaviour
 			mz=-0.2f;
         }
 
-     /*   if (me.y >= 5 || me.y <= -5 || me.x >= 15 || me.x <= -15)
-        {
-            mx = 0;
-            mz = 0;
+        /*   if (me.y >= 5 || me.y <= -5 || me.x >= 15 || me.x <= -15)
+           {
+               mx = 0;
+               mz = 0;
 
-        }*/
-		//-------------
-		if (Input.GetKey (KeyCode.LeftArrow)==false && Input.GetKey (KeyCode.RightArrow)==false&&Input.GetKey (KeyCode.UpArrow)==false && Input.GetKey (KeyCode.DownArrow)==false) 
+           }*/
+        //-------------
+        /*if (Input.GetKey (KeyCode.LeftArrow)==false || Input.GetKey (KeyCode.RightArrow)==false||Input.GetKey (KeyCode.UpArrow)==false || Input.GetKey (KeyCode.DownArrow)==false) 
 		{
 			mx /=1.2f;
 			mz /=1.2f;
             woaking = true;
-        }
-
+        } */
+        mx /= 1.2f;
+        mz /= 1.2f;
 
         GameObject[] count = GameObject.FindGameObjectsWithTag("pin");
         
 
-        if (Input.GetKeyDown(KeyCode.Space)&&count.Length<=2&&cooltime>=10)
+        if (Input.GetKeyDown(KeyCode.Space)&&count.Length<2&&cooltime>=10)
         {
             cooltime = 0;
             Instantiate(pin, new Vector3(me.x, 0, me.z), Quaternion.identity);
@@ -86,7 +87,7 @@ public class mov : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "ball")
+      /*  if (other.gameObject.tag == "ball")
         {
           
         }
@@ -95,7 +96,7 @@ public class mov : MonoBehaviour
             mx = 0;
             mz = 0;
             woaking = false;
-        }
+        }*/
      //   else woaking = true;
     }
 

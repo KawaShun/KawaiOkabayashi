@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ball : MonoBehaviour {
 
-    public GameObject player1;
+     GameObject player;
     int hit = 0;
    public Vector3 t  ;
    public Vector3 b=new Vector3(0,0,0);
@@ -42,12 +42,13 @@ public class ball : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
+            player=GameObject.Find("player1");
             hit = 1;
-            t = player1.GetComponent<Transform>().position;
+            t = player.GetComponent<Transform>().position;
             b = this.transform.position;
             p = b - t;
             power = 0;
-            power = player1.GetComponent<mov>().power;
+            power = player.GetComponent<mov>().power;
             Debug.Log("hit");
             shoot();
         }
