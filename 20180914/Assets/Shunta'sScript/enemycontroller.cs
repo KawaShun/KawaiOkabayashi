@@ -13,7 +13,6 @@ public class enemycontroller : MonoBehaviour {
         SHOOT
     }
     MODE move = MODE.SHOOT;
-    MODE drib = MODE.DRIBBLE;
     public MODE GetEnemyMode()
     {
         return move;
@@ -22,11 +21,6 @@ public class enemycontroller : MonoBehaviour {
     {
         move = _mode;
     }
-    public MODE GetEnemyModeDribble()
-    {
-        return drib;
-    }
-
     // Use this for initialization
     void Start () {
         
