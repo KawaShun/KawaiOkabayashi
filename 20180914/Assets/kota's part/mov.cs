@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 public class mov : MonoBehaviour
 {
-    public float power = 10;
-    bool woaking = true;
+    public float power = 10; //プレイヤーが持ってる蹴る力(ボールにこの数値を伝える)
+    bool woaking = true; //使わない
 
-	public float mx=0;
-	public float mz=0;
+	public float mx=0; //x軸
+	public float mz=0; //z軸
     public GameObject pin;
     Vector3 me;
-    GameObject timer;
-    float cooltime = 10;
+    GameObject timer; //pinのゲージ
+    float cooltime = 10; //pnのクールタイム
     // Use this for initialization
     void Start()
     {
@@ -53,20 +53,7 @@ public class mov : MonoBehaviour
 			//mz -= Mathf.Clamp (0.003f, 0, 0.2f);
 			mz=-0.2f;
         }
-
-        /*   if (me.y >= 5 || me.y <= -5 || me.x >= 15 || me.x <= -15)
-           {
-               mx = 0;
-               mz = 0;
-
-           }*/
-        //-------------
-        /*if (Input.GetKey (KeyCode.LeftArrow)==false || Input.GetKey (KeyCode.RightArrow)==false||Input.GetKey (KeyCode.UpArrow)==false || Input.GetKey (KeyCode.DownArrow)==false) 
-		{
-			mx /=1.2f;
-			mz /=1.2f;
-            woaking = true;
-        } */
+        //減速
         mx /= 1.2f;
         mz /= 1.2f;
 
@@ -85,24 +72,4 @@ public class mov : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-      /*  if (other.gameObject.tag == "ball")
-        {
-          
-        }
-        if (other.gameObject.tag == "wall")
-        {
-            mx = 0;
-            mz = 0;
-            woaking = false;
-        }*/
-     //   else woaking = true;
-    }
-
-    void pintime()
-    {
-        
-
-    }
 }

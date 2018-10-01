@@ -9,13 +9,14 @@ public class pin : MonoBehaviour {
     float syometu;
     float kierutime=0.3f;
     bool derete = false;
-
+    Vector3 pinpos;
     GameObject ball;
     private void Start()
     {
         this.GetComponent<BoxCollider>().isTrigger=  true;
         al = 0.3f;
-        this.ball = GameObject.Find("theball");
+       this.ball = GameObject.Find("theball");
+        pinpos = this.transform.position;
     }
 
     void Update()
@@ -49,7 +50,7 @@ public class pin : MonoBehaviour {
         al = 0;
         syometu = 0;
         derete = true;
-        this.ball.GetComponent<ball>().t = this.transform.position;
+        this.ball.GetComponent<ball>().t = pinpos;
         Debug.Log(ball.GetComponent<ball>().t);
     }
 }
