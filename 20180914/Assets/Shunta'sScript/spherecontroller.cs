@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class spherecontroller : MonoBehaviour {
     
-    public float power = 1000.0f;          //シュート係数
-    public float dribblepower = 200.0f;   //ドリブル係数
+    public float power = 5000.0f;          //シュート係数
+    public float dribblepower = 3500.0f;   //ドリブル係数
     bool enemyShootFlg = false;           //シュートフラグ
     Vector3 goalPos;                     //ゴールポジション
     Vector3 goalDir;                    //ゴールのベクター
+    public GameObject sphere;
     // Use this for initialization
     void Start () {
-        
+
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update () {
+    }
 
     //当たり判定
     private void OnTriggerEnter(Collider other)

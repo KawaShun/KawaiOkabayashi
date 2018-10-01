@@ -6,6 +6,7 @@ public class enemycontroller : MonoBehaviour {
 
     public GameObject target;
     public float moveSpeed = 1.0f;
+    public GameObject enemycubepre;
     //敵のモード
     public enum MODE
     {
@@ -23,7 +24,7 @@ public class enemycontroller : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-        
+
 	}
 	
 	// Update is called once per frame
@@ -35,7 +36,10 @@ public class enemycontroller : MonoBehaviour {
         dir.Normalize();
         // 移動させる
         transform.Translate(dir.x * moveSpeed, dir.y * moveSpeed, dir.z*moveSpeed);
-        
+        enemycubepre.transform.position = new Vector3(Mathf.Clamp(enemycubepre.transform.position.x, -14, 14),
+                                                      Mathf.Clamp(enemycubepre.transform.position.y, -14, 14), 
+                                                      Mathf.Clamp(enemycubepre.transform.position.z, -14, 14));
+
     }
 
 }
