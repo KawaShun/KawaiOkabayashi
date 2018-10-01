@@ -36,10 +36,6 @@ public class enemycontroller : MonoBehaviour {
         dir.Normalize();
         // 移動させる
         transform.Translate(dir.x * moveSpeed, dir.y * moveSpeed, dir.z*moveSpeed);
-        enemycubepre.transform.position = new Vector3(Mathf.Clamp(enemycubepre.transform.position.x, -14, 14),
-                                                      Mathf.Clamp(enemycubepre.transform.position.y, -14, 14), 
-                                                      Mathf.Clamp(enemycubepre.transform.position.z, -14, 14));
-
     }
 
 }
