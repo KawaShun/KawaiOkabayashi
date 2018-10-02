@@ -18,6 +18,10 @@ public class Director : MonoBehaviour
     private void Start()
     {
         this.ball = GameObject.Find("theball");
+        score[0] = 0;
+        score[1] = 0;
+        score[2] = 0;
+        score[3] = 0;
 
     }
 

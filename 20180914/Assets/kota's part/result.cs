@@ -11,7 +11,7 @@ public class result : MonoBehaviour {
     //static
     int[] score = { Director.score[0], Director.score[1] , Director.score[2]  ,Director.score[3] };
     //
-    int[] juni = { 0, 0, 0, 0 };
+   // int[] juni = { 0, 0, 0, 0 };
     // Use this for initialization
     void Start () {
 
