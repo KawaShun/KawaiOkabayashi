@@ -12,7 +12,7 @@ public class timecontroller : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //制限時間
-        time = 10;
+        time = 100;
 	}
 	
 	// Update is called once per frame
