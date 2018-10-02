@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/kota's part/result/rizaruto.unity
+    path: Assets/Scenes/rizaruto.unity
     guid: 65bcfe16f74ca9747b4482c5b156a1e0
   m_configObjects: {}
