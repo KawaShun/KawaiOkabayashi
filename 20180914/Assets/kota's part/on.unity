@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 32495692}
   - component: {fileID: 32495691}
   m_Layer: 0
-  m_Name: player4
+  m_Name: player3
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 56449158}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afe5c5a6aa125964ca28c94e6f3bf3fd, type: 3}
   m_Name: 
@@ -1453,6 +1453,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd71449cfa06ee4aab9fde2fb19c0be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreA: 0
+  scoreB: 0
+  scoreC: 0
+  scoreD: 0
 --- !u!4 &499447799
 Transform:
   m_ObjectHideFlags: 0
@@ -3560,7 +3564,7 @@ GameObject:
   - component: {fileID: 1872044349}
   - component: {fileID: 1872044348}
   m_Layer: 0
-  m_Name: player3
+  m_Name: player4
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3599,7 +3603,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1872044347}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afe5c5a6aa125964ca28c94e6f3bf3fd, type: 3}
   m_Name: 
