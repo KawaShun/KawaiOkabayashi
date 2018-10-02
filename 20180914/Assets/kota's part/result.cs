@@ -21,13 +21,13 @@ public class result : MonoBehaviour {
             score[i] = score[i];
         }
         this.textbourd = GameObject.Find("scoreTxA");
-      this.textbourd.GetComponent<Text>().text =score[0].ToString();
+      this.textbourd.GetComponent<Text>().text =score[3].ToString();
         this.textbourd = GameObject.Find("scoreTxB");
-        this.textbourd.GetComponent<Text>().text = score[1].ToString();
-        this.textbourd = GameObject.Find("scoreTxC");
         this.textbourd.GetComponent<Text>().text = score[2].ToString();
+        this.textbourd = GameObject.Find("scoreTxC");
+        this.textbourd.GetComponent<Text>().text = score[0].ToString();
         this.textbourd = GameObject.Find("scoreTxD");
-        this.textbourd.GetComponent<Text>().text = score[3].ToString();
+        this.textbourd.GetComponent<Text>().text = score[1].ToString();
     }
 	
 	// Update is called once per frame
