@@ -26,7 +26,7 @@ public class ball : MonoBehaviour
     void Update()
     {
         speed = rigid.velocity.magnitude;
-        VP.GetComponent<Text>().text = speed.ToString("F1");
+        //VP.GetComponent<Text>().text = speed.ToString("F1");
         power = (Mathf.Abs(power * 0.3f));
     }
 

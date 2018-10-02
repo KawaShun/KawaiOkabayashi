@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class timecontroller : MonoBehaviour {
@@ -26,6 +27,7 @@ public class timecontroller : MonoBehaviour {
         if (time <= 0.0f)
         {
             time = 0;
+            SceneManager.LoadScene("rizaruto");
         }
 	}
 }
