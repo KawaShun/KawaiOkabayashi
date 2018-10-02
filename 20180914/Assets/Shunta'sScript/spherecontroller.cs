@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class spherecontroller : MonoBehaviour {
     
-    public float power = 1000.0f;          //シュート係数
-    public float dribblepower = 200.0f;   //ドリブル係数
-    Collider objcoll;                     //オブジェクトコライダー
+    public float power = 6000.0f;          //シュート係数
+    public float dribblepower = 4500.0f;   //ドリブル係数
+    bool enemyShootFlg = false;           //シュートフラグ
+    Vector3 goalPos;                     //ゴールポジション
+    Vector3 goalDir;                    //ゴールのベクター
+    public GameObject sphere;
     // Use this for initialization
     void Start () {
-        
+
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update () {
+    }
 
     //当たり判定
     private void OnTriggerEnter(Collider other)
@@ -24,6 +26,8 @@ public class spherecontroller : MonoBehaviour {
         if (other.gameObject.tag == "goal")
         {
             Debug.Log("検知しました");
+            enemyShootFlg = true;
+            goalPos = other.transform.position;
         }
         //敵
         if (other.gameObject.tag == "enemy")
@@ -35,13 +39,21 @@ public class spherecontroller : MonoBehaviour {
             //シュートかドリブルかランダムで決める
             int rand = Random.Range(0, 2);
             Debug.Log("mode:" + rand);
-            if(rand == 0)
+            if (rand == 0)
             {
-                other.GetComponent<enemycontroller>().SetEnemyMode(enemycontroller.MODE.DRIBBLE); 
+                other.GetComponent<enemycontroller>().SetEnemyMode(enemycontroller.MODE.DRIBBLE);
             }
             else
             {
                 other.GetComponent<enemycontroller>().SetEnemyMode(enemycontroller.MODE.SHOOT);
+            }
+            // ゴール判定内だったらゴールの方向にシュートする
+            if (enemyShootFlg == true)
+            {
+                goalDir = goalPos- transform.position;
+                goalDir.Normalize();
+                GetComponent<Rigidbody>().AddForce(goalDir * power);
+                return;
             }
 
             //シュートとドリブルの力の大きさ
@@ -54,6 +66,14 @@ public class spherecontroller : MonoBehaviour {
                 GetComponent<Rigidbody>().AddForce(dir * power);
 
             }
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        //ゴール
+        if (other.gameObject.tag == "goal")
+        {
+            enemyShootFlg = false;
         }
 
     }
