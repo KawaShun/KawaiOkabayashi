@@ -5,10 +5,11 @@ using UnityEngine.UI;
 public class Director : MonoBehaviour
 {
     //スコア管理 蹴った　ボールが相手のゴールにはいったら+1、オウンゴール-1
-    public int scoreA = 0;
-   public int scoreB = 0;
-   public int scoreC = 0;
-   public int scoreD = 0;
+  //  public static int scoreA = 0;
+   // public static int scoreB = 0;
+    //public static int scoreC = 0;
+    //p//ublic static int scoreD = 0;
+    public static int[] score = { 0, 0, 0, 0 };
     //public int id = 0;
 
     GameObject target;
@@ -28,56 +29,57 @@ public class Director : MonoBehaviour
     {
         if (id != 1 && ball.GetComponent<ball>().lastkick == 1)
         {
-            scoreA += 1;
+            // scoreA += 1;
+            score[0] += 1;
             target = GameObject.Find("scoreA");
-            target.GetComponent<Text>().text = scoreA.ToString("");
+            target.GetComponent<Text>().text = score[0].ToString("");
         }
         else if (id == 1 && ball.GetComponent<ball>().lastkick == 1)
         {
-            scoreA -= 1;
+            score[0] -= 1;
             target = GameObject.Find("scoreA");
-            target.GetComponent<Text>().text = scoreA.ToString("");
+            target.GetComponent<Text>().text = score[0].ToString("");
         }
         //-----------------------------------------------------------------------
         if (id != 2 && ball.GetComponent<ball>().lastkick == 2)
         {
-            scoreB += 1;
+            score[1] += 1;
             target = GameObject.Find("scoreB");
-            target.GetComponent<Text>().text = scoreB.ToString("");
+            target.GetComponent<Text>().text = score[1].ToString("");
         }
         else if (id == 2 && ball.GetComponent<ball>().lastkick == 2)
         {
-            scoreB -= 1;
+            score[1] -= 1;
             target = GameObject.Find("scoreB");
-            target.GetComponent<Text>().text = scoreB.ToString("");
+            target.GetComponent<Text>().text = score[1].ToString("");
         }
         //-----------------------------------------------------------------------
         if (id != 3 && ball.GetComponent<ball>().lastkick == 3)
         {
-            scoreC += 1;
+            score[2] += 1;
             target = GameObject.Find("scoreC");
-            target.GetComponent<Text>().text = scoreC.ToString("");
+            target.GetComponent<Text>().text = score[2].ToString("");
         }
         else if (id == 3 && ball.GetComponent<ball>().lastkick == 3)
         {
-            scoreC -= 1;
+            score[2] -= 1;
             target = GameObject.Find("scoreC");
-            target.GetComponent<Text>().text = scoreC.ToString("");
+            target.GetComponent<Text>().text = score[2].ToString("");
 
         }
 
         //-----------------------------------------------------------------------
         if (id != 4 && ball.GetComponent<ball>().lastkick == 4)
         {
-            scoreD += 1;
+            score[3] += 1;
             target = GameObject.Find("scoreD");
-            target.GetComponent<Text>().text = scoreD.ToString("");
+            target.GetComponent<Text>().text = score[3].ToString("");
         }
         else if (id == 4 && ball.GetComponent<ball>().lastkick == 4)
         {
-            scoreD -= 1;
+            score[3] -= 1;
             target = GameObject.Find("scoreD");
-            target.GetComponent<Text>().text = scoreD.ToString("");
+            target.GetComponent<Text>().text = score[3].ToString("");
 
         }
         /* if (id == 1)
@@ -99,5 +101,10 @@ public class Director : MonoBehaviour
         return id;
 
 
+    }
+
+    public static int getscore()
+    {
+        return score[0];
     }
 }
