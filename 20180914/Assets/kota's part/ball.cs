@@ -96,8 +96,17 @@ public class ball : MonoBehaviour
             shoot();
 
         }
+        //y軸を固定する
+        if (other.gameObject.tag == "field")
+        {
+            rigid.constraints = RigidbodyConstraints.FreezePositionY;
+        }
 
-
+    }
+    //フリーズ解除
+    public void FreezeRelease()
+    {
+        rigid.constraints = RigidbodyConstraints.None;
     }
     void shoot()
     {

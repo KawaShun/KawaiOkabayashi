@@ -15,7 +15,10 @@ public class Goal : MonoBehaviour
         {
             Debug.Log("in");
             // Destroy(other.gameObject);
-            other.transform.position = new Vector3(0,5,0);
+            other.transform.position = new Vector3(0,0,0);
+            //フリーズ解除
+            other.GetComponent<ball>().FreezeRelease();
+
             other.GetComponent<Rigidbody>().velocity = Vector3.zero;
             //  Director.GetComponent<Director>().id = 2;
             Director.GetComponent<Director>().Addcount(idd);

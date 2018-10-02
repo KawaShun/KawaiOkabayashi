@@ -9,6 +9,7 @@ TagManager:
   - wall
   - ball
   - pin
+  - field
   layers:
   - Default
   - TransparentFX
