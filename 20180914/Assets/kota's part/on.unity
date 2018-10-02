@@ -1498,10 +1498,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd71449cfa06ee4aab9fde2fb19c0be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreA: 0
-  scoreB: 0
-  scoreC: 0
-  scoreD: 0
 --- !u!4 &499447799
 Transform:
   m_ObjectHideFlags: 0
@@ -1801,7 +1797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &600736885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3650,7 +3646,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &1872044350
 MonoBehaviour:
@@ -3898,6 +3894,10 @@ Prefab:
     - target: {fileID: 4711950818362014, guid: 94013d646fa5d1e438db844115a77dfe, type: 2}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1361651798404110, guid: 94013d646fa5d1e438db844115a77dfe, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94013d646fa5d1e438db844115a77dfe, type: 2}
