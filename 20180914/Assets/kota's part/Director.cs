@@ -56,6 +56,7 @@ public class Director : MonoBehaviour
             score[1] -= 1;
             target = GameObject.Find("scoreB");
             target.GetComponent<Text>().text = score[1].ToString("");
+
         }
         //-----------------------------------------------------------------------
         if (id != 3 && ball.GetComponent<ball>().lastkick == 3)
@@ -84,6 +85,7 @@ public class Director : MonoBehaviour
             score[3] -= 1;
             target = GameObject.Find("scoreD");
             target.GetComponent<Text>().text = score[3].ToString("");
+
 
         }
         /* if (id == 1)

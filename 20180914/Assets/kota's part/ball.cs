@@ -28,6 +28,9 @@ public class ball : MonoBehaviour
         speed = rigid.velocity.magnitude;
         //VP.GetComponent<Text>().text = speed.ToString("F1");
         power = (Mathf.Abs(power * 0.3f));
+
+        if (this.transform.position.y < -10) this.transform.position = new Vector3(0, 0, 0);
+
     }
 
     private void OnCollisionEnter(Collision other)
@@ -89,9 +92,9 @@ public class ball : MonoBehaviour
         {
 
             b = this.transform.position;
-            p = b - t;
+            p =  -(b - t);
 
-            power = Mathf.Clamp(power + 3.5f, 0, 10);
+            power = Mathf.Clamp(power + 5.5f, 0, 10);
             Debug.Log("hitthepin");
             shoot();
 
@@ -101,13 +104,27 @@ public class ball : MonoBehaviour
         {
             rigid.constraints = RigidbodyConstraints.FreezePositionY;
         }
+        if (this.transform.position.y>=0.07f)
+        {
+            rigid.constraints = RigidbodyConstraints.None;
+        }
+
+
+       
 
     }
     //フリーズ解除
-    public void FreezeRelease()
+   /* private void OnCollisionExit2D(Collision2D other)
     {
-        rigid.constraints = RigidbodyConstraints.None;
-    }
+        if (other.gameObject.tag == "field")
+        {
+            rigid.constraints = RigidbodyConstraints.None;
+        }
+    } */
+     public void FreezeRelease()
+     {
+         rigid.constraints = RigidbodyConstraints.None;
+     } 
     void shoot()
     {
         Rigidbody rb = this.GetComponent<Rigidbody>();

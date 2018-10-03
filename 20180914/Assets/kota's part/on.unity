@@ -238,7 +238,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 32495690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 0.002, z: -4}
+  m_LocalPosition: {x: -4, y: 0.002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1858520524}
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2041980136}
-  moveSpeed: 0.1
+  moveSpeed: 0.09
   enemycubepre: {fileID: 0}
 --- !u!1 &56449158
 GameObject:
@@ -360,7 +360,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 56449158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 0.002, z: 4}
+  m_LocalPosition: {x: 0, y: 0.002, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 978973426}
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2041980136}
-  moveSpeed: 0.1
+  moveSpeed: 0.07
   enemycubepre: {fileID: 0}
 --- !u!1 &82088693
 GameObject:
@@ -745,7 +745,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 161640563}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 0.002, z: 4}
+  m_LocalPosition: {x: 4, y: 0.002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1229860449}
@@ -767,7 +767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2041980136}
-  moveSpeed: 0.1
+  moveSpeed: 0.11
   enemycubepre: {fileID: 0}
 --- !u!1 &176808066
 GameObject:
@@ -3630,7 +3630,7 @@ Prefab:
     - target: {fileID: 54071418064317250, guid: a69932d70fa78984dbd0bf91a1278aaf,
         type: 2}
       propertyPath: m_Mass
-      value: 1.2
+      value: 1.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a69932d70fa78984dbd0bf91a1278aaf, type: 2}
@@ -3735,7 +3735,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &1872044350
 MonoBehaviour:
@@ -3813,7 +3813,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1872044347}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 0.002, z: -4}
+  m_LocalPosition: {x: 0, y: 0.002, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 109076708}

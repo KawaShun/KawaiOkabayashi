@@ -12,7 +12,7 @@ public class mov : MonoBehaviour
     public GameObject pin;
     Vector3 me;
     GameObject timer; //pinのゲージ
-    float cooltime = 10; //pnのクールタイム
+    float cooltime = 5; //pnのクールタイム
     // Use this for initialization
     void Start()
     {
